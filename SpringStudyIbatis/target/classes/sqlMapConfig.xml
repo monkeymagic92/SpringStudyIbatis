@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- iBATIS.com 더이상 존재하지 않음. -->
+<!-- <!DOCTYPE sqlMapConfig PUBLIC
+"-//iBATIS.com//DTD SQL Map Config 2.0//EN" "http://www.ibatis.com/dtd/sql-map-config-2.dtd"> -->
+<!DOCTYPE sqlMapConfig PUBLIC
+        "-//ibatis.apache.org//DTD SQL Map Config 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-config-2.dtd">
+
+<sqlMapConfig>
+
+    <settings useStatementNamespaces="true" />
+
+
+    <sqlMap resource="sqlmap/userSql.xml" />
+
+</sqlMapConfig>
