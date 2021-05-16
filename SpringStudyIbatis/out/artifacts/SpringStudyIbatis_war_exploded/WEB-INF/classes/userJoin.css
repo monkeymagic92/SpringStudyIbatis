@@ -1,0 +1,35 @@
+#frm {
+    margin-top: 15%;
+    text-align: center;
+}
+
+#frmContainer {
+
+}
+
+#frmContainer:hover {
+    background-color: black;
+}
+
+#submitBtn {
+    width: 60px;
+    margin-top: 1%;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+    color: grey;
+    transition: 0.4s;
+}
+
+#submitBtn:hover {
+    width: 100px;
+    transition: 0.4s;
+    cursor:pointer;
+}
+
+select {
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: green;
+}

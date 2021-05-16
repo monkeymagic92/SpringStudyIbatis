@@ -5,6 +5,7 @@ public class UserVO {
     private int i_user;
     private String user_id;
     private String user_pw;
+    private String com_dcd;
 
     public int getI_user() {
         return i_user;
@@ -28,5 +29,13 @@ public class UserVO {
 
     public void setUser_pw(String user_pw) {
         this.user_pw = user_pw;
+    }
+
+    public String getCom_dcd() {
+        return com_dcd;
+    }
+
+    public void setCom_dcd(String com_dcd) {
+        this.com_dcd = com_dcd;
     }
 }

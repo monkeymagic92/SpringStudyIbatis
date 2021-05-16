@@ -11,12 +11,14 @@
 <head>
     <title>Title</title>
 </head>
-<body>
 
-<c:forEach items="${list}" var="item">
-    <div>${item.i_user}</div>
-    <div>${item.user_id}</div>
-    <div>${item.user_pw}</div>
-</c:forEach>
+<body>
+    <button type="button" onclick="moveToJoin()">회원가입</button>
+
+<script>
+    function moveToJoin() {
+        location.href="/user/join.do";
+    }
+</script>
 </body>
 </html>

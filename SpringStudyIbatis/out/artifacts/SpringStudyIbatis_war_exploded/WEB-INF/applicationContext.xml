@@ -3,6 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+
+
     <!-- DriverManagerDataSource는 커넥션(connection pool)을 지원하지 않는다. -->
     <!-- 그러므로 이후엔 아파치가 제공하는 BasicDataSource를 사용한다. -->
     <!-- oracle 기준  -->
