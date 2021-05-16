@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="container">
-    <form id="frm" action ="/user/join.do" method="post">
+    <form id="frm" action ="/user/join.do" method="post" onsubmit="return frmChk()">
         <div class="frmContainer">
             <input type="text" id="joinId" name="user_id" placeholder="Id 입력"><br>
             <input type="password" id="joinPw1" name="user_pw" placeholder="password 입력"><br>
@@ -34,6 +34,13 @@
 
 <script>
 
+    function frmChk() {
+        if(frm.user_pw.value != frm.user_pw2.value) {
+            alert('두 비번 확인')
+            frm.user_pw.focus();
+            return false;
+        }
+    }
 
 
 </script>
