@@ -13,8 +13,20 @@ public class UserServiceImpl implements UserService {
     @Autowired
     private UserDAOImpl dao;
 
-    public List<UserVO> selUser() {
-        return dao.selUser();
+    public List<UserVO> selUser(UserVO vo) {
+
+        return dao.selUser(vo);
+    }
+
+    public List<UserVO> userList() {
+
+        return dao.userList();
+    }
+
+    @Override
+    public int joinUser(UserVO vo) {
+        dao.joinUser(vo);
+        return 1;
     }
 
 }

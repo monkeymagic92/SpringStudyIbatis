@@ -17,23 +17,39 @@ public class UserController {
     @Autowired
     private UserServiceImpl service;
 
-    @RequestMapping(value="/login.do", method = RequestMethod.GET)
-    public String login(Model model) {
-
-        model.addAttribute("list", service.selUser());
+    // 로그인
+    @RequestMapping(value = "/login.do", method = RequestMethod.GET)
+    public String login(Model model, UserVO vo) {
+        vo.setI_user("2");
+        model.addAttribute("list", service.selUser(vo));
         return "user/login";
     }
 
-    @RequestMapping(value="/join.do", method = RequestMethod.GET)
+    // 회원가입
+    @RequestMapping(value = "/join.do", method = RequestMethod.GET)
     public String join() {
 
         return "user/join";
     }
 
-    @RequestMapping(value="/join.do", method = RequestMethod.POST)
+    // 회원가입 post
+    @RequestMapping(value = "/join.do", method = RequestMethod.POST)
     public String join(UserVO vo, HttpServletRequest request) {
+        int result = service.joinUser(vo);
+        System.out.println("result : " + result);
 
+        if (result == 1) {
+            return "redirect:/user/login.do";
+        } else {
+            return "redirect:/user/join.do";
+        }
+    }
 
-        return "user/login";
+    // 유저 전체목록
+    @RequestMapping(value = "/userList.do", method = RequestMethod.GET)
+    public String userList(UserVO vo, Model model) {
+
+        model.addAttribute("list", service.userList());
+        return "user/userList";
     }
 }

@@ -17,6 +17,7 @@
 <div class="container">
     <form id="frm" action ="/user/join.do" method="post" onsubmit="return frmChk()">
         <div class="frmContainer">
+            <input type="text" id="nm" name="nm" placeholder="이름 입력"><br>
             <input type="text" id="joinId" name="user_id" placeholder="Id 입력"><br>
             <input type="password" id="joinPw1" name="user_pw" placeholder="password 입력"><br>
             <input type="password" id="joinPw2" name="user_pw2" placeholder="password 재입력"><br>

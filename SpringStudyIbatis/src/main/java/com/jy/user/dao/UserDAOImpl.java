@@ -14,8 +14,19 @@ public class UserDAOImpl implements UserDAO {
     SqlMapClientTemplate sqlmap;
 
 
-    public List<UserVO> selUser() {
-        return sqlmap.queryForList("user.selUser");
+    public List<UserVO> selUser(UserVO vo) {
+
+        return sqlmap.queryForList("user.selUser", vo);
+    }
+
+    public List<UserVO> userList() {
+        return sqlmap.queryForList("user.userList");
+    }
+
+    @Override
+    public int joinUser(UserVO vo) {
+        sqlmap.insert("user.joinUser", vo);
+        return 1;
     }
 
 }

@@ -2,17 +2,26 @@ package com.jy.user.vo;
 
 public class UserVO {
 
-    private int i_user;
+    private String i_user;
+    private String nm;
     private String user_id;
     private String user_pw;
     private String com_dcd;
 
-    public int getI_user() {
+    public String getI_user() {
         return i_user;
     }
 
-    public void setI_user(int i_user) {
+    public void setI_user(String i_user) {
         this.i_user = i_user;
+    }
+
+    public String getNm() {
+        return nm;
+    }
+
+    public void setNm(String nm) {
+        this.nm = nm;
     }
 
     public String getUser_id() {

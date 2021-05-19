@@ -6,5 +6,9 @@ import java.util.List;
 
 public interface UserService {
 
-    List<UserVO> selUser();
+    List<UserVO> selUser(UserVO vo);
+
+    List<UserVO> userList();
+
+    int joinUser(UserVO vo);
 }

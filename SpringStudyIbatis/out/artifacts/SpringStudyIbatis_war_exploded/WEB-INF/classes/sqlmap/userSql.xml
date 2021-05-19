@@ -6,7 +6,29 @@
 <sqlMap namespace="user">
     <typeAlias alias="UserVO" type="com.jy.user.vo.UserVO" />
 
-    <select id="selUser" resultClass="UserVO">
+    <sql id="selectListBase">
         SELECT I_USER, USER_ID, USER_PW FROM USER_INFO
+    </sql>
+
+    <sql id="selectWhereBase">
+        WHERE I_USER = #i_user#
+    </sql>
+
+    <select id="selUser" parameterClass="UserVO" resultClass="UserVO">
+        <include refid="user.selectListBase" />
+        <include refid="user.selectWhereBase" />
     </select>
+
+    <select id="userList" resultClass="UserVO">
+        <include refid="user.selectListBase" />
+    </select>
+
+    <insert id="joinUser" parameterClass="UserVO" >
+        INSERT INTO USER_INFO
+        (I_USER, NM, USER_ID, USER_PW, COM_DCD)
+        VALUES
+        (USER_SEQ.NEXTVAL, #nm#, #user_id#, #user_pw#, #com_dcd#)
+    </insert>
+
+
 </sqlMap>
